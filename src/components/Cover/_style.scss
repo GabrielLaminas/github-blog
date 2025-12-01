@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.cover{
+  max-width: 100%;
+  min-height: 18.5rem;
+  height: 100%;
+  position: relative;
+  background-image: url('../../assets/cover.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  img{
+    position: absolute;
+    left: 50%;
+    top: 4rem;
+    transform: translateX(-50%);
+  }
+}

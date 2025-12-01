@@ -1,3 +1,7 @@
+import Cover from "./components/Cover";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <Cover />
+  );
 }
