@@ -3,9 +3,33 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: $base-background;
   font-family: "Nunito", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main__content{
+  margin-top: -4.5rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  width: 100%;
+  max-width: 54rem;
+  margin: 0 auto;
 }
