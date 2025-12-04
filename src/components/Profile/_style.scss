@@ -1,6 +1,6 @@
 @import "../../styles/variables";
 
-.profile{
+.profile {
   padding: 2rem 2rem 2rem 2.5rem;
   display: flex;
   gap: 2rem;
@@ -9,14 +9,14 @@
   box-shadow: 0 2px 28px 0 rgba($color: #000000, $alpha: 0.2);
 }
 
-.profile__avatar{
+.profile__avatar {
   width: 9.25rem;
   height: 9.25rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
   overflow: hidden;
 
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -24,69 +24,84 @@
   }
 }
 
-.profile__content{
+.profile__content {
   margin-top: 0.5rem;
 
-  .profile__content__info{
+  .profile__content__info {
     margin-bottom: 0.5rem;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
 
-    h1{
+    h1 {
       color: $base-title;
       font-size: $font-2xl;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
     }
 
-    a{
+    a {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      position: relative;
       color: $blue;
       font-size: $font-xs;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       text-transform: uppercase;
-      transition: .3s;
+      transition: 0.3s;
 
-      &:hover{
-        color: $base-text;
+      &::before{
+        content: "";
+        width: 0%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: calc(100% + 3.5px);
+        left: 0;
+        background-color: $blue;
+        visibility: hidden;
+        transition: .4s;
+      }
 
-        svg{
-          fill: $base-text; 
+      &:hover {
+        &::before{
+          width: 100%;
+          visibility: visible;
         }
       }
     }
 
-    svg{
-      transition: .3s;
+    svg {
+      flex-shrink: 0;
+      transition: 0.3s;
     }
   }
 
-  & > p{
+  & > p {
     margin-bottom: 1.5rem;
     color: $base-text;
     font-size: $font-md;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     line-height: $line-height;
   }
 
-  .profile__content__list{
+  .profile__content__list {
     display: flex;
     gap: 1.5rem;
     align-items: center;
 
-    li{
+    li {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       color: $base-subtitle;
       font-size: $font-md;
-      font-weight: 400;
+      font-weight: $font-weight-regular;
       line-height: $line-height;
     }
 
-    svg{
+    svg {
       flex-shrink: 0;
     }
   }
