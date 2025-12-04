@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+
+.post__card{
+  padding: 2rem;
+  display: block;
+  background-color: $base-post;
+  border-radius: 0.625rem;
+  transition: .4s;
+  border: 2px solid $base-post;
+
+  &:hover{
+    border: 2px solid $base-label;
+  }
+
+  p{
+    color: $base-text;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+    line-height: $line-height;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+}
+
+.post__card__title{
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  h2{
+    color: $base-title;
+    font-size: $font-xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height;
+  }
+
+  span{
+    margin-top: 0.3125rem;
+    flex-shrink: 0;
+    font-size: $font-sm;
+    color: $base-span;
+    font-weight: $font-weight-regular;
+    line-height: $line-height;
+  }
+}
