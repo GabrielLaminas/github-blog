@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+
+.info__list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $base-span;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
