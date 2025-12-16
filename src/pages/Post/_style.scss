@@ -1,0 +1,68 @@
+@use "../../styles/variables" as *;
+
+.post__info {
+  padding: 2rem;
+  background-color: $base-profile;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 28px 0 rgba($color: #000000, $alpha: 0.2);
+
+  h1{
+    margin: 1.25rem 0 0.75rem 0;
+    color: $base-title;
+    font-size: $font-2xl;
+    font-weight: $font-weight-bold;
+    line-height: 130%;
+  }
+}
+
+.post__info__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info__header__backbutton{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $blue;
+  font-size: $font-xs;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+
+  svg{
+    flex-shrink: 0;
+  }
+}
+
+.post__content{
+  padding: 2.5rem 2rem;
+  
+  p{
+    color: $base-text;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+    line-height: $line-height;
+
+    strong{
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  p + p{
+    margin-top: 1.5rem;
+  }
+
+  code{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    display: block;
+    background-color: $base-post;
+    color: #FFFFFF;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+    line-height: $line-height;
+    border-radius: 2px;
+  }
+}
