@@ -39,43 +39,6 @@
       font-size: $font-2xl;
       font-weight: $font-weight-bold;
     }
-
-    a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      position: relative;
-      color: $blue;
-      font-size: $font-xs;
-      font-weight: $font-weight-bold;
-      text-transform: uppercase;
-      transition: 0.3s;
-
-      &::before{
-        content: "";
-        width: 0%;
-        height: 1px;
-        display: block;
-        position: absolute;
-        top: calc(100% + 3.5px);
-        left: 0;
-        background-color: $blue;
-        visibility: hidden;
-        transition: .4s;
-      }
-
-      &:hover {
-        &::before{
-          width: 100%;
-          visibility: visible;
-        }
-      }
-    }
-
-    svg {
-      flex-shrink: 0;
-      transition: 0.3s;
-    }
   }
 
   & > p {
@@ -84,25 +47,5 @@
     font-size: $font-md;
     font-weight: $font-weight-regular;
     line-height: $line-height;
-  }
-
-  .profile__content__list {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-
-    li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: $base-subtitle;
-      font-size: $font-md;
-      font-weight: $font-weight-regular;
-      line-height: $line-height;
-    }
-
-    svg {
-      flex-shrink: 0;
-    }
   }
 }

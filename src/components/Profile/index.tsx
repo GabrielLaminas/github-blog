@@ -1,6 +1,8 @@
+import GitHubLink from "../GitHubLink";
+import { Info, InfoItem } from "../Info";
 import "./_style.scss";
 
-import { FaArrowUpRightFromSquare, FaGithub, FaRegBuilding, FaUsers } from "react-icons/fa6";
+import { FaGithub, FaRegBuilding, FaUsers } from "react-icons/fa6";
 
 
 export default function Profile() {
@@ -13,32 +15,33 @@ export default function Profile() {
       <div className="profile__content">
         <div className="profile__content__info">
           <h1>Cameron Williamson</h1>
-          <a href="#">
-            github
-            <FaArrowUpRightFromSquare color="#3294F8" />
-          </a>
+
+          <GitHubLink 
+            link="#"
+            text="github"
+          />
         </div>
 
         <p>
           Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
         </p>
 
-        <ul className="profile__content__list">
-          <li>
-            <FaGithub color="#3A536B" />
-            cameronwll
-          </li>
+        <Info>
+          <InfoItem 
+            icon={FaGithub}
+            text="cameronwll"
+          />
 
-          <li>
-            <FaRegBuilding color="#3A536B" />
-            cameronwll
-          </li>
+          <InfoItem 
+            icon={FaRegBuilding}
+            text="Rocketseat"
+          />
 
-          <li>
-            <FaUsers color="#3A536B" />
-            cameronwll
-          </li>
-        </ul>
+          <InfoItem 
+            icon={FaUsers}
+            text="32 seguidores"
+          />
+        </Info>
       </div>
     </section>
   );
