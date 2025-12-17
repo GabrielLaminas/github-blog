@@ -1,16 +1,5 @@
-import Cover from "./components/Cover";
-import Profile from "./components/Profile";
-import Posts from "./components/Posts";
+import AppRoutes from "./routes";
 
 export default function App() {
-  return (
-    <>
-      <Cover />
-
-      <main className="main__content">
-        <Profile />
-        <Posts />
-      </main>
-    </>
-  );
+  return <AppRoutes />;
 }
