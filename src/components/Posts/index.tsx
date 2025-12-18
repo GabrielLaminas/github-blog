@@ -1,6 +1,6 @@
 import "./_style.scss";
 
-import PostItem from "../PostItem";
+import PostItem from "../../components/PostItem";
 
 export default function Posts() {
   return (
@@ -10,7 +10,7 @@ export default function Posts() {
           <p>Publicações</p>
           <span>6 publicações</span>
         </div>
-        
+
         <form className="posts__publications__form">
           <input type="text" placeholder="Buscar conteúdo" />
         </form>

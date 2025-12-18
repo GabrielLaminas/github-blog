@@ -1,17 +1,17 @@
 @use "../../styles/variables" as *;
 
-.posts{
+.blog{
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.posts__publications{
+.blog__publications{
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   
-  .posts__publications__text{
+  .blog__publications__text{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@
     }
   }
 
-  .posts__publications__form{}
+  .blog__publications__form{}
 
   input{
     width: 100%;
@@ -64,12 +64,12 @@
   }
 }
 
-.posts__list{
+.blog__list{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 
-  .posts__list__item{
+  .blog__list__item{
     flex: 1;
   }
 }
