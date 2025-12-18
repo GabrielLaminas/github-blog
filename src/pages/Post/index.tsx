@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import GitHubLink from "../../components/GitHubLink";
 import { Info, InfoItem }from "../../components/Info";
 import "./_style.scss";
@@ -9,10 +10,10 @@ export default function Post() {
     <section>
       <article className="container post__info">
         <div className="post__info__header">
-          <a className="info__header__backbutton" href="#">
+          <Link className="info__header__backbutton" to="/">
             <FaAngleLeft color="#3294F8" />
             Voltar
-          </a>  
+          </Link>  
 
           <GitHubLink 
             link="#"
