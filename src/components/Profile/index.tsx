@@ -1,45 +1,47 @@
+import type { Users } from "../../@types/github";
 import GitHubLink from "../GitHubLink";
 import { Info, InfoItem } from "../Info";
 import "./_style.scss";
 
 import { FaGithub, FaRegBuilding, FaUsers } from "react-icons/fa6";
 
+interface Props {
+  profile: Users;
+}
 
-export default function Profile() {
+export default function Profile({ profile }: Props) {
   return (
     <section className="container profile">
       <div className="profile__avatar">
-        <img src="https://avatars.githubusercontent.com/u/93532694?v=4" alt="" />
+        <img src={profile.avatar_url} alt="imagem de perfil" width={148} height={148} />
       </div>
 
       <div className="profile__content">
         <div className="profile__content__info">
-          <h1>Cameron Williamson</h1>
+          <h1>{profile.name}</h1>
 
           <GitHubLink 
-            link="#"
+            link={profile.html_url}
             text="github"
           />
         </div>
 
-        <p>
-          Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
-        </p>
+        <p>{profile.bio}</p>
 
         <Info>
           <InfoItem 
             icon={FaGithub}
-            text="cameronwll"
+            text={profile.login}
           />
 
           <InfoItem 
             icon={FaRegBuilding}
-            text="Rocketseat"
+            text={profile.company || "Não informado"}
           />
 
           <InfoItem 
             icon={FaUsers}
-            text="32 seguidores"
+            text={`${profile.followers} seguidor(es)`}
           />
         </Info>
       </div>
