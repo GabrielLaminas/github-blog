@@ -1,24 +1,22 @@
 import { Link } from "react-router-dom";
 import "./_style.scss";
+import type { Items } from "../../@types/github";
+
+import { formatDistanceToNow } from "date-fns";
 
 interface Props {
-  data?: {
-    title: string;
-    date: Date;
-    description: string;
-  }
-  link: string;
+  data: Items;
 }
 
-export default function PostItem({ data = undefined, link }: Props) {
+export default function PostItem({ data }: Props) {
   return(
-    <Link to={link} className="post__card">
+    <Link to={`post/${data.id}`} className="post__card">
       <div className="post__card__title">
-        <h2>JavaScript data types and data structures</h2>
-        <span>Há 1 dia</span>
+        <h2>{data.title}</h2>
+        <span>{formatDistanceToNow(data.created_at, { addSuffix: true })}</span>
       </div>
 
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat adipisci consequatur, mollitia eligendi unde necessitatibus accusamus blanditiis exercitationem molestias officia voluptates incidunt maiores repellendus distinctio nisi! Rem labore repellat minima.</p>
+      <p>{data.body}</p>
     </Link>
   );
 }
