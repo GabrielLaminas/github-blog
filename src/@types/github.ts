@@ -7,3 +7,19 @@ export interface Users {
   company: string | null;
   html_url: string;
 }
+
+export interface Items {
+  id: number;
+  title: string;
+  body: string;
+  created_at: string;
+  user: Users;
+  html_url: string;
+  comments: number;
+}
+
+export interface Issues {
+  total_count: number;
+  incomplete_results: boolean;
+  items: Items[];
+}
