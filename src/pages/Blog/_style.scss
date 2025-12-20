@@ -65,12 +65,7 @@
 }
 
 .blog__list{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display:grid;
   gap: 2rem;
-
-  .blog__list__item{
-    flex: 1;
-  }
+  grid-template-columns: 26rem 26rem;
 }
-

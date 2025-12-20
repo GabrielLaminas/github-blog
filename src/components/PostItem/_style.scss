@@ -1,6 +1,8 @@
 @use "../../styles/variables" as *;
 
 .post__card{
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   display: block;
   background-color: $base-post;
@@ -44,5 +46,9 @@
     color: $base-span;
     font-weight: $font-weight-regular;
     line-height: $line-height;
+
+    &::first-letter{
+      text-transform: uppercase;
+    }
   }
 }
