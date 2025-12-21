@@ -68,4 +68,10 @@
   display:grid;
   gap: 2rem;
   grid-template-columns: 26rem 26rem;
+
+  .no-item{
+    text-align: center;
+    font-size: 1.125rem;
+    color: $base-title;
+  }
 }
